@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+// DECLARATIONS/VARIABLES
+
+$purple: #9356DC;
+$pink:#FF79DA;
+$mint: #99E2D0;
+$darkgrey:rgb(77, 77, 77);
+$gradient: linear-gradient(0deg, rgba(147,86,220,0.9024665880503144) 0%, rgba(255,121,218,1) 100%);
+$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+$margt: 25px;
+$margb: 25px;
+
+
+@mixin center-margin-tb($margt, $margb) {
+    margin: $margt auto $margb auto;
+}
+
+@mixin fonctionnement-btn {
+    text-align: center;
+    box-shadow: $shadow;
+    background-color: rgba(240, 240, 240, 0.712);
+    @include center-margin-tb(30px, 0px);
+    border-radius: 20px;
+    width: 87%;
+    padding: 25px 0 25px 0;
+    &:hover{
+        background-color: #a96af52a;
+        i{
+            color: $purple;
+        }
+    }
+    p{
+        position: relative;
+        font-weight: 500;
+    }
+    i{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        font-size: 18px;
+        margin-left: 65px;
+        color: rgb(112, 112, 112);
+    }
+    .btn-number{
+        float: left;
+        color: white;
+        font-size: 14px;
+        margin-left: -10px;
+        padding: 4px 8px 4px 8px;
+        background-color: $purple;
+        border-radius: 15px;
+    }
+}
+
+@mixin restaurants-cards {
+    width: 335px;
+    overflow: hidden;
+    @include center-margin-tb(20px, 0px);
+    border-radius: 15px;
+    box-shadow: $shadow;
+    span{
+        position: absolute;
+        background-color: $mint;
+        border-radius: 3px;
+        float: right;
+        color: green;
+        font-size: 15px;
+        padding: 7px 10px 7px 10px;
+    }
+    img{
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+    }
+    .cards-text{
+        height: 80px;
+        background-color: white;
+        margin-top: -4px;
+        width: 100%;
+        display: inline-block;
+        h3{
+            font-size: 17px;
+            margin: 20px 0px 5px 10px;
+        }
+        p{
+            margin-left: 10px;
+            font-weight: 300;
+        }
+    }
+}
+
+// GENERAL
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    display: inline-block;
+    margin: 50px 0 0px 20px;
+}    
+
+@media screen and (max-width: 1450px) {
+    // LOGO
+
+.div-logo{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+    background-color: rgb(248, 248, 248); 
+    padding-top: 18px;
+    padding-bottom: 18px; 
+    img{
+        display: block;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// LOCALISATION
+
+.localisation{
+    background-color: rgba(187, 187, 187, 0.397);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    p{
+        width: 65%;
+        color: $darkgrey;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: left;
+    }
+    i{
+        width: 35%;
+        text-align: right;
+        margin-right: 10px;
+        color: $darkgrey;
+    }
+}
+
+// PRESENTATION
+
+.presentation{
+    background-color: rgb(240, 240, 240); 
+    text-align: center;
+    display: inline-block;
+    height: 290px;
+    h1{
+        width: 65%;
+        @include center-margin-tb(35px, 20px);
+    }
+    p{
+        width: 78%;
+        @include center-margin-tb(0px, 40px);
+        color: $darkgrey;
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .presentation-btn{
+        @include center-margin-tb(30px, 40px);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+        background: $gradient;
+        color: white;
+        padding: 15px 20px 15px 20px;
+        border-radius: 25px;
+    }
+}
+
+.fonctionnement{
+    margin-bottom: 70px;
+    .fonctionnement-btn{
+        @include fonctionnement-btn();
+    }
+}
+
+.restaurants{
+    background-color: rgb(240, 240, 240);
+    padding-bottom: 60px;
+    .restaurants-cards{
+        @include restaurants-cards();
+    }
+}
+}
+
+footer{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding-bottom: 30px;
+    img{
+        margin: 25px 0 15px 20px;
+        width: 25%;
+        filter: invert(1);
+    }
+    ul>li{
+        list-style-type: none;
+        font-size: 15px;
+        margin: 0 0 7px 20px;
+        .fa-utensils{
+            font-size: 14px;
+            margin-right: 11px;
+        }
+        .fa-hands-helping{
+            font-size: 14px;
+            margin-right: 4px;
+        }
+    }
+}
