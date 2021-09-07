@@ -60,16 +60,18 @@ $margb: 1.5625rem;
     @include center-margin-tb(20px, 0px);
     border-radius: 0.9375rem;
     box-shadow: $shadow;
-    .cards-notification{
+    .notification-container{
         position: absolute;
-        margin-left: 15.3125rem;
-        margin-top: 0.625rem;
-        float: right;
-        background-color: $mint;
-        border-radius: 0.1875rem;
-        color: green;
-        font-size: 0.9375rem;
-        padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+        right: 7%;
+        .cards-notification{
+            align-content: flex-end;
+            margin-top: 0.625rem;
+            background-color: $mint;
+            border-radius: 0.1875rem;
+            color: green;
+            font-size: 0.9375rem;
+            padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+        }
     }
     img{
         width: 100%;
@@ -178,7 +180,7 @@ h2{
         border-radius: 1.5625rem;
         display: inline-flex;
         transition-property:  transform;
-        transition-duration: 800ms;
+        transition-duration: 3s;
         &:hover{
             transform: scale(1.10);
         }

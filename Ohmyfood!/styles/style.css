@@ -97,8 +97,8 @@ h2 {
     transition-property: -webkit-transform;
     transition-property: transform;
     transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 800ms;
-            transition-duration: 800ms;
+    -webkit-transition-duration: 3s;
+            transition-duration: 3s;
   }
   .presentation .presentation-btn:hover {
     -webkit-transform: scale(1.1);
@@ -156,11 +156,14 @@ h2 {
     -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
             box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
   }
-  .restaurants .restaurants-cards .cards-notification {
+  .restaurants .restaurants-cards .notification-container {
     position: absolute;
-    margin-left: 15.3125rem;
+    right: 7%;
+  }
+  .restaurants .restaurants-cards .notification-container .cards-notification {
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
     margin-top: 0.625rem;
-    float: right;
     background-color: #99E2D0;
     border-radius: 0.1875rem;
     color: green;
