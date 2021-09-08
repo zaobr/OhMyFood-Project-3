@@ -32,15 +32,14 @@ $margb: 1.5625rem;
         }
     }
     p{
-        position: relative;
         font-weight: 500;
     }
     i{
-        position: absolute;
+        float: left;
         z-index: 1;
         left: 0;
         font-size: 1.125rem;
-        margin-left: 4.0625rem;
+        margin-left: 1.5625rem;
         color: rgb(112, 112, 112);
     }
     .btn-number{
@@ -83,14 +82,24 @@ $margb: 1.5625rem;
         background-color: white;
         margin-top: -0.25rem;
         width: 100%;
-        display: inline-block;
-        h3{
-            font-size: 1.0625rem;
-            margin: 1.25rem 0rem 0.3125rem 0.625rem;
+        display: flex;
+        .container-text{
+            width: 86%;
+            h3{
+                font-size: 1.0625rem;
+                margin: 1.25rem 0rem 0.3125rem 0.625rem;
+            }
+            p{
+                margin-left: 0.625rem;
+                font-weight: 300;
+            }
         }
-        p{
-            margin-left: 0.625rem;
-            font-weight: 300;
+        .container-icon{
+            width: 14%;
+            .cards-icon{
+                margin-top: 30px;
+                font-size: 25px;
+            }
         }
     }
 }
@@ -109,8 +118,7 @@ h2{
     margin: 3.125rem 0 0rem 1.25rem;
 }    
 
-@media screen and (max-width: 1900px) {
-    // LOGO
+// LOGO
 
 .div-logo{
     width: 100%;
@@ -201,7 +209,7 @@ h2{
         @include restaurants-cards();
     }
 }
-}
+
 
 footer{
     background-color: rgb(54, 54, 54);
