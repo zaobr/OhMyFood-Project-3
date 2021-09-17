@@ -1,0 +1,121 @@
+@mixin center-margin-tb($margt, $margb) {
+    margin: $margt auto $margb auto;
+}
+
+@mixin fonctionnement-btn {
+    text-align: center;
+    box-shadow: $shadow;
+    background-color: rgba(240, 240, 240, 0.712);
+    @include center-margin-tb(30px, 0px);
+    border-radius: 1.25rem;
+    width: 87%;
+    padding: 1.5625rem 0 1.5625rem 0;
+    &:hover{
+        background-color: #a96af52a;
+        i{
+            color: $purple;
+        }
+    }
+    .btn-text{
+        font-weight: 500;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    i{
+        float: left;
+        z-index: 1;
+        left: 0;
+        font-size: 1.125rem;
+        margin-left: 1.5625rem;
+        color: rgb(112, 112, 112);
+    }
+    .btn-number{
+        float: left;
+        color: white;
+        font-size: 0.875rem;
+        margin-left: -0.625rem;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        background-color: $purple;
+        border-radius: 0.9375rem;
+    }
+}
+
+@mixin btn {
+    @include center-margin-tb(0, 40px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;  
+    background: $gradient;
+    color: white;
+    padding: 0.9375rem 1.25rem 0.9375rem 1.25rem;
+    border-radius: 1.5625rem;
+    display: inline-flex;
+    &:hover{
+        background: $darkgradient;
+        box-shadow: rgba(0, 0, 0.1, 0.25) 0rem 0.45rem 0.85rem; 
+    }
+}
+
+@mixin restaurants-cards {
+    width: 90%;
+    overflow: hidden;
+    @include center-margin-tb(20px, 0px);
+    border-radius: 0.9375rem;
+    box-shadow: $shadow;
+    .notification-container{
+        position: absolute;
+        right: 7%;
+        .cards-notification{
+            margin-top: 0.625rem;
+            background-color: $mint;
+            border-radius: 0.1875rem;
+            color: green;
+            font-size: 0.9375rem;
+            padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+        }
+    }
+    img{
+        width: 100%;
+        height: 10.9375rem;
+        object-fit: cover;
+    }
+    .cards-text{
+        height: 5rem;
+        background-color: white;
+        margin-top: -0.25rem;
+        width: 100%;
+        display: flex;
+        .container-text{
+            width: 80%;
+            h3{
+                font-size: 1.0625rem;
+                margin: 1.25rem 0rem 0.3125rem 0.625rem;
+            }
+            p{
+                margin-left: 0.625rem;
+                font-weight: 300;
+            }
+        }
+        .container-icon{
+            width: 20%;
+            .empty-icon{
+                font-size: 25px;
+                margin-top: 20px;
+                background: rgba(29, 29, 29, 0.623);
+                -webkit-background-clip: text;
+	            -webkit-text-fill-color: transparent;
+            }
+            .full-icon{
+                font-size: 22px;
+                margin-top: 20px;
+                background: $gradient;
+                -webkit-background-clip: text;
+	            -webkit-text-fill-color: transparent;
+                height: 0px;
+                transition: height 1s ease;
+                &:hover{
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
