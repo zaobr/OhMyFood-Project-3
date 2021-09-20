@@ -55,6 +55,57 @@
     }
 }
 
+@mixin animated-heart-index {
+    .container-icon{
+        width: 20%;
+        .empty-icon{
+            font-size: 25px;
+            margin-top: 20px;
+            background: rgba(29, 29, 29, 0.623);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .full-icon{
+            font-size: 22px;
+            margin-top: 20px;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 0px;
+            transition: height 1s ease;
+            &:hover{
+                height: 25px;
+            }
+        }
+    }
+}
+
+@mixin animated-heart-menu {
+    .container-icon{
+        width: 25%;
+        .empty-icon{
+            font-size: 25px;
+            margin-top: 5px;
+            background: rgba(29, 29, 29, 0.623);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .full-icon{
+            font-size: 22px;
+            margin-top: 5px;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 0px;
+            transition: height 1s ease;
+            &:hover{
+                height: 25px;
+            }
+        }
+    }
+}
+
+
 @mixin restaurants-cards {
     width: 90%;
     overflow: hidden;
@@ -95,27 +146,38 @@
                 font-weight: 300;
             }
         }
-        .container-icon{
-            width: 20%;
-            .empty-icon{
-                font-size: 25px;
-                margin-top: 20px;
-                background: rgba(29, 29, 29, 0.623);
-                -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;
-            }
-            .full-icon{
-                font-size: 22px;
-                margin-top: 20px;
-                background: $gradient;
-                -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;
-                height: 0px;
-                transition: height 1s ease;
-                &:hover{
-                    height: 25px;
-                }
-            }
-        }
+        @include animated-heart-index();
     }
 }
+
+@mixin plats {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    .plat-container{
+        margin: 10px 0 10px 10px;
+        width: 88%;
+        .menu-plat{
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .menu-description{
+            font-weight: 100;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+     }
+     .price-container{
+         width: 12%;
+        .menu-price{
+            margin-top: 32px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+     }
+};
