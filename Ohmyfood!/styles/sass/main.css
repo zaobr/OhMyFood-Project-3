@@ -7,6 +7,20 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.header-backarrow {
+  margin-left: 1.875em;
+  font-size: 1.5em;
+  color: rgba(46, 46, 46, 0.863);
+  position: absolute;
+}
+
+.header-cover img {
+  width: 100%;
+  height: 17.1875em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .div-logo {
   width: 100%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
@@ -299,13 +313,6 @@ h2 {
 
 .restaurants .restaurants-cards a:visited {
   color: black;
-}
-
-.header-cover img {
-  width: 100%;
-  height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .text-deco {
