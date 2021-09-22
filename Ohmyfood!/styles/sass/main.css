@@ -88,6 +88,11 @@ footer ul > li {
   margin: 0 0 0.4375rem 1.25rem;
 }
 
+footer ul > li a {
+  text-decoration: none;
+  color: white;
+}
+
 footer ul > li .fa-utensils {
   font-size: 0.875rem;
   margin-right: 0.6875rem;
@@ -243,6 +248,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: black;
 }
 
 .restaurants .restaurants-cards .cards-text .container-text {
@@ -265,7 +271,7 @@ h2 {
 
 .restaurants .restaurants-cards .cards-text .container-icon .empty-icon {
   font-size: 25px;
-  margin-top: 20px;
+  margin-top: 25px;
   background: rgba(29, 29, 29, 0.623);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -273,7 +279,7 @@ h2 {
 
 .restaurants .restaurants-cards .cards-text .container-icon .full-icon {
   font-size: 22px;
-  margin-top: 20px;
+  margin-top: 25px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.902467)), to(#ff79da));
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.902467) 0%, #ff79da 100%);
   -webkit-background-clip: text;
@@ -297,6 +303,7 @@ h2 {
 
 .header-cover img {
   width: 100%;
+  height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -324,27 +331,28 @@ h2 {
 }
 
 .menu .container-title .menu-title {
-  width: 75%;
+  width: 76%;
   font-size: 25px;
-  margin-left: 20px;
+  margin-left: 25px;
   font-family: 'Shrikhand';
+  margin-right: auto;
 }
 
 .menu .container-title .container-icon {
-  width: 25%;
+  width: 24%;
 }
 
 .menu .container-title .container-icon .empty-icon {
-  font-size: 25px;
-  margin-top: 5px;
+  font-size: 23px;
+  margin-top: 3px;
   background: rgba(29, 29, 29, 0.623);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .menu .container-title .container-icon .full-icon {
-  font-size: 22px;
-  margin-top: 5px;
+  font-size: 20px;
+  margin-top: 3px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.902467)), to(#ff79da));
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.902467) 0%, #ff79da 100%);
   -webkit-background-clip: text;
@@ -380,28 +388,30 @@ h2 {
 
 .menu .menu-div .plat-container {
   margin: 10px 0 10px 10px;
-  width: 88%;
+  width: 87%;
 }
 
 .menu .menu-div .plat-container .menu-plat {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 15px;
 }
 
 .menu .menu-div .plat-container .menu-description {
   font-weight: 100;
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 5px;
 }
 
 .menu .menu-div .price-container {
-  width: 12%;
+  width: 13%;
 }
 
 .menu .menu-div .price-container .menu-price {
   margin-top: 32px;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu .container-btn {

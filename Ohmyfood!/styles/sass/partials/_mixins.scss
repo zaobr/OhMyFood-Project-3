@@ -60,14 +60,14 @@
         width: 20%;
         .empty-icon{
             font-size: 25px;
-            margin-top: 20px;
+            margin-top: 25px;
             background: rgba(29, 29, 29, 0.623);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .full-icon{
             font-size: 22px;
-            margin-top: 20px;
+            margin-top: 25px;
             background: $gradient;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -82,17 +82,17 @@
 
 @mixin animated-heart-menu {
     .container-icon{
-        width: 25%;
+        width: 24%;
         .empty-icon{
-            font-size: 25px;
-            margin-top: 5px;
+            font-size: 23px;
+            margin-top: 3px;
             background: rgba(29, 29, 29, 0.623);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .full-icon{
-            font-size: 22px;
-            margin-top: 5px;
+            font-size: 20px;
+            margin-top: 3px;
             background: $gradient;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -135,6 +135,7 @@
         margin-top: -0.25rem;
         width: 100%;
         display: flex;
+        color: black;
         .container-text{
             width: 80%;
             h3{
@@ -161,23 +162,25 @@
     box-shadow: $shadow;
     .plat-container{
         margin: 10px 0 10px 10px;
-        width: 88%;
+        width: 87%;
         .menu-plat{
-            font-weight: bold;
+            font-weight: 500;
             font-size: 15px;
         }
         .menu-description{
             font-weight: 100;
-            font-size: 14px;
+            font-size: 13px;
             margin-top: 5px;
         }
      }
      .price-container{
-         width: 12%;
+        width: 13%;
         .menu-price{
             margin-top: 32px;
-            font-weight: bold;
+            font-weight: 500;
             font-size: 14px;
+            margin-left: auto;
+            margin-right: auto;
         }
      }
 };
