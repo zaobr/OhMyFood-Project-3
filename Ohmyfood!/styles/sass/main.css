@@ -435,16 +435,24 @@ h2 {
 }
 
 .menu .menu-div .plat-animation {
+  position: relative;
   width: 0%;
   background-color: #99E2D0;
   font-size: 27px;
-  margin: auto;
   color: white;
-  display: none;
-  padding: 16px 0 15px 0;
+  overflow: hidden;
+  padding: 14px 0 14px 0;
+  -webkit-transition: width 1s;
+  transition: width 1s;
 }
 
 .menu .menu-div .plat-animation i {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  position: absolute;
+  left: calc(50% - 13.5px);
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   margin-right: auto;
@@ -453,7 +461,6 @@ h2 {
 
 .menu .menu-div:hover .plat-animation {
   width: 35%;
-  display: inherit;
 }
 
 .menu .menu-div:hover .plat-animation i {

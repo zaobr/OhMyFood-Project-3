@@ -195,14 +195,18 @@
         }
     }
     .plat-animation{
+        position: relative;
         width: 0%;
         background-color: $mint;
         font-size: 27px;
-        margin: auto;
         color: white;
-        display: none;
-        padding: 16px 0 15px 0;
+        overflow: hidden;
+        padding: 14px 0 14px 0;
+        transition: width 1s;
         i{
+            transition: transform 1s;
+            position: absolute;
+            left: calc(50% - 13.5px);
             transform: rotate(90deg);
             margin-right: auto;
             margin-left: auto;
@@ -213,7 +217,6 @@
 @mixin animation-checkbox {
     .plat-animation{
         width: 35%;
-        display: inherit;
         i{
             transform: rotate(360deg);
         }
