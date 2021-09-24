@@ -10,6 +10,7 @@
 .header-backarrow {
   margin-left: 1.875em;
   font-size: 1.5em;
+  top: calc(50% - 12.5px);
   color: rgba(46, 46, 46, 0.863);
   position: absolute;
 }
@@ -28,6 +29,7 @@
   background-color: #f8f8f8;
   padding-top: 1.125rem;
   padding-bottom: 1.125rem;
+  position: relative;
 }
 
 .div-logo img {
@@ -351,15 +353,16 @@ h2 {
 
 .menu .container-title .container-icon .empty-icon {
   font-size: 23px;
-  margin-top: 3px;
-  background: rgba(29, 29, 29, 0.623);
+  margin-top: 4px;
+  background: rgba(29, 29, 29, 0.493);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  height: 25px;
 }
 
 .menu .container-title .container-icon .full-icon {
-  font-size: 20px;
-  margin-top: 3px;
+  font-size: 23px;
+  margin-top: 4px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.902467)), to(#ff79da));
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.902467) 0%, #ff79da 100%);
   -webkit-background-clip: text;
@@ -421,6 +424,12 @@ h2 {
   margin-right: auto;
 }
 
+.menu .menu-div .plat-animation {
+  width: 0%;
+  background-color: #99E2D0;
+  display: none;
+}
+
 .menu .container-btn {
   text-align: center;
   margin-top: 40px;
@@ -452,5 +461,68 @@ h2 {
 .menu .container-btn .btn a {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .fonctionnement h2 {
+    width: 100%;
+  }
+  .fonctionnement .fonctionnement-btn {
+    width: 29%;
+  }
+  .fonctionnement .fonctionnement-btn .fa-mobile-alt {
+    font-size: 20px;
+    margin-top: 0.6rem;
+    margin-left: 1.2rem;
+  }
+  .fonctionnement .fonctionnement-btn .fa-list-ul {
+    font-size: 20px;
+    margin-top: 0.6rem;
+    margin-left: 1.2rem;
+  }
+  .fonctionnement .fonctionnement-btn .fa-store {
+    font-size: 19px;
+    margin-top: 0.6rem;
+    margin-left: 1rem;
+  }
+  .fonctionnement .fonctionnement-btn .btn-number {
+    margin-top: 0.4rem;
+  }
+  .fonctionnement .fonctionnement-btn .btn-text {
+    width: 45%;
+  }
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurants h2 {
+    width: 100%;
+  }
+  .restaurants .restaurants-cards {
+    width: 48%;
+    position: relative;
+  }
+  .restaurants .restaurants-cards .notification-container {
+    position: absolute;
+    right: 3%;
+  }
+  .restaurants .restaurants-cards .notification-container .cards-notification {
+    margin-top: 0.625rem;
+    background-color: #99E2D0;
+    border-radius: 0.1875rem;
+    color: green;
+    font-size: 0.9375rem;
+    padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

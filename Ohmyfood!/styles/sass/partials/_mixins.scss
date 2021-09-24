@@ -85,14 +85,16 @@
         width: 24%;
         .empty-icon{
             font-size: 23px;
-            margin-top: 3px;
-            background: rgba(29, 29, 29, 0.623);
+            margin-top: 4px;
+            background: rgba(29, 29, 29, 0.493);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            height: 25px;
+
         }
         .full-icon{
-            font-size: 20px;
-            margin-top: 3px;
+            font-size: 23px;
+            margin-top: 4px;
             background: $gradient;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -172,8 +174,9 @@
             font-size: 13px;
             margin-top: 5px;
         }
-     }
-     .price-container{
+    }
+    
+    .price-container{
         width: 13%;
         .menu-price{
             margin-top: 32px;
@@ -182,5 +185,80 @@
             margin-left: auto;
             margin-right: auto;
         }
-     }
+    }
+
+    .plat-animation{
+        width: 0%;
+        background-color: $mint;
+        display: none;
+    }
 };
+
+@mixin tab {
+    @media screen and (min-width: 768px) {
+        .fonctionnement{
+            display: flex;
+            flex-wrap: wrap;
+            h2{
+                width: 100%;
+            }
+            .fonctionnement-btn{
+                width: 29%;
+                .fa-mobile-alt{
+                    font-size: 20px;
+                    margin-top: 0.6rem;
+                    margin-left: 1.2rem;
+                }
+
+                .fa-list-ul{
+                    font-size: 20px;
+                    margin-top: 0.6rem;
+                    margin-left: 1.2rem;
+                }
+
+                .fa-store{
+                    font-size: 19px;
+                    margin-top: 0.6rem;
+                    margin-left: 1rem;
+                }
+
+                .btn-number{
+                    margin-top: 0.4rem;
+                }
+
+                .btn-text{
+                    width: 45%;
+                }
+            }
+        }
+        .restaurants{
+            display: flex;
+            flex-wrap: wrap;
+            h2{
+                width: 100%;
+            }
+            .restaurants-cards{
+                width: 48%;
+                position: relative;
+                .notification-container{
+                    position: absolute;
+                    right: 3%;
+                    .cards-notification{
+                        margin-top: 0.625rem;
+                        background-color: $mint;
+                        border-radius: 0.1875rem;
+                        color: green;
+                        font-size: 0.9375rem;
+                        padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1024px) {
+        
+    }
+}
