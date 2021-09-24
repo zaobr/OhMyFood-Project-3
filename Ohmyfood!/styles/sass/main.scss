@@ -95,6 +95,9 @@ h2{
 
     .menu-div{
         @include plats();
+        &:hover{
+            @include animation-checkbox();
+        }
     }
 
     .container-btn{

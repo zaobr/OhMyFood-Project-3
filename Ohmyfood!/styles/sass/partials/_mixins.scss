@@ -162,20 +162,28 @@
     background: white;
     border-radius: 15px;
     box-shadow: $shadow;
+    overflow: hidden;
+    flex-wrap: nowrap;
     .plat-container{
         margin: 10px 0 10px 10px;
         width: 87%;
+        overflow: hidden;
         .menu-plat{
             font-weight: 500;
             font-size: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         .menu-description{
             font-weight: 100;
             font-size: 13px;
             margin-top: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
-    
     .price-container{
         width: 13%;
         .menu-price{
@@ -186,13 +194,31 @@
             margin-right: auto;
         }
     }
-
     .plat-animation{
         width: 0%;
         background-color: $mint;
+        font-size: 27px;
+        margin: auto;
+        color: white;
         display: none;
+        padding: 16px 0 15px 0;
+        i{
+            transform: rotate(90deg);
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 };
+
+@mixin animation-checkbox {
+    .plat-animation{
+        width: 35%;
+        display: inherit;
+        i{
+            transform: rotate(360deg);
+        }
+    }
+}
 
 @mixin tab {
     @media screen and (min-width: 768px) {

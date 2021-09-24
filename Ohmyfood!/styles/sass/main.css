@@ -394,22 +394,32 @@ h2 {
   border-radius: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
           box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
+  overflow: hidden;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .menu .menu-div .plat-container {
   margin: 10px 0 10px 10px;
   width: 87%;
+  overflow: hidden;
 }
 
 .menu .menu-div .plat-container .menu-plat {
   font-weight: 500;
   font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu .menu-div .plat-container .menu-description {
   font-weight: 100;
   font-size: 13px;
   margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu .menu-div .price-container {
@@ -427,7 +437,28 @@ h2 {
 .menu .menu-div .plat-animation {
   width: 0%;
   background-color: #99E2D0;
+  font-size: 27px;
+  margin: auto;
+  color: white;
   display: none;
+  padding: 16px 0 15px 0;
+}
+
+.menu .menu-div .plat-animation i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu .menu-div:hover .plat-animation {
+  width: 35%;
+  display: inherit;
+}
+
+.menu .menu-div:hover .plat-animation i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menu .container-btn {
