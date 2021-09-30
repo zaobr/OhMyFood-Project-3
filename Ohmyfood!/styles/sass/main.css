@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
@@ -35,6 +36,7 @@
 .div-logo img {
   display: block;
   width: 40%;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -94,6 +96,7 @@ footer {
 footer img {
   margin: 1.5625rem 0 0.9375rem 1.25rem;
   width: 25%;
+  max-width: 150px;
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -143,6 +146,7 @@ h2 {
   border-radius: 1.25rem;
   width: 87%;
   padding: 1.5625rem 0 1.5625rem 0;
+  position: relative;
 }
 
 .fonctionnement .fonctionnement-btn:hover {
@@ -156,14 +160,14 @@ h2 {
 .fonctionnement .fonctionnement-btn .btn-text {
   font-weight: 500;
   width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .fonctionnement .fonctionnement-btn i {
+  position: absolute;
   float: left;
   z-index: 1;
-  left: 0;
+  left: 4%;
   font-size: 1.125rem;
   margin-left: 1.5625rem;
   color: #707070;
@@ -325,7 +329,11 @@ h2 {
   width: 32px;
 }
 
-.menu {
+.container-menu {
+  background-color: #f0f0f0;
+}
+
+.container-menu .menu {
   background-color: #f0f0f0;
   border-radius: 30px 30px 0 0;
   margin-top: -60px;
@@ -334,12 +342,12 @@ h2 {
   z-index: 1;
 }
 
-.menu .container-title {
+.container-menu .menu .container-title {
   background-color: #f0f0f0;
   margin-top: 30px;
 }
 
-.menu .container-title .menu-title {
+.container-menu .menu .container-title .menu-title {
   width: 76%;
   font-size: 25px;
   margin-left: 25px;
@@ -347,11 +355,11 @@ h2 {
   margin-right: auto;
 }
 
-.menu .container-title .container-icon {
+.container-menu .menu .container-title .container-icon {
   width: 24%;
 }
 
-.menu .container-title .container-icon .empty-icon {
+.container-menu .menu .container-title .container-icon .empty-icon {
   font-size: 23px;
   margin-top: 4px;
   background: rgba(29, 29, 29, 0.493);
@@ -360,7 +368,7 @@ h2 {
   height: 25px;
 }
 
-.menu .container-title .container-icon .full-icon {
+.container-menu .menu .container-title .container-icon .full-icon {
   font-size: 23px;
   margin-top: 4px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.902467)), to(#ff79da));
@@ -372,11 +380,11 @@ h2 {
   transition: height 1s ease;
 }
 
-.menu .container-title .container-icon .full-icon:hover {
+.container-menu .menu .container-title .container-icon .full-icon:hover {
   height: 25px;
 }
 
-.menu h3 {
+.container-menu .menu h3 {
   margin-top: 40px;
   font-weight: 100;
   font-size: 15px;
@@ -384,7 +392,7 @@ h2 {
   text-transform: uppercase;
 }
 
-.menu .menu-div {
+.container-menu .menu .menu-div {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -399,13 +407,13 @@ h2 {
       flex-wrap: nowrap;
 }
 
-.menu .menu-div .plat-container {
+.container-menu .menu .menu-div .plat-container {
   margin: 10px 0 10px 10px;
   width: 87%;
   overflow: hidden;
 }
 
-.menu .menu-div .plat-container .menu-plat {
+.container-menu .menu .menu-div .plat-container .menu-plat {
   font-weight: 500;
   font-size: 15px;
   overflow: hidden;
@@ -413,7 +421,7 @@ h2 {
   text-overflow: ellipsis;
 }
 
-.menu .menu-div .plat-container .menu-description {
+.container-menu .menu .menu-div .plat-container .menu-description {
   font-weight: 100;
   font-size: 13px;
   margin-top: 5px;
@@ -422,11 +430,11 @@ h2 {
   text-overflow: ellipsis;
 }
 
-.menu .menu-div .price-container {
+.container-menu .menu .menu-div .price-container {
   width: 13%;
 }
 
-.menu .menu-div .price-container .menu-price {
+.container-menu .menu .menu-div .price-container .menu-price {
   margin-top: 32px;
   font-weight: 500;
   font-size: 14px;
@@ -434,7 +442,7 @@ h2 {
   margin-right: auto;
 }
 
-.menu .menu-div .plat-animation {
+.container-menu .menu .menu-div .plat-animation {
   position: relative;
   width: 0%;
   background-color: #99E2D0;
@@ -446,7 +454,7 @@ h2 {
   transition: width 1s;
 }
 
-.menu .menu-div .plat-animation i {
+.container-menu .menu .menu-div .plat-animation i {
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -459,23 +467,24 @@ h2 {
   margin-left: auto;
 }
 
-.menu .menu-div:hover .plat-animation {
+.container-menu .menu .menu-div:hover .plat-animation {
   width: 35%;
 }
 
-.menu .menu-div:hover .plat-animation i {
+.container-menu .menu .menu-div:hover .plat-animation i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.menu .container-btn {
+.container-menu .container-btn {
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-.menu .container-btn .btn {
+.container-menu .container-btn .btn {
   width: 33%;
+  max-width: 150px;
   margin: 0 auto 40px auto;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
           box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;
@@ -489,19 +498,49 @@ h2 {
   display: inline-flex;
 }
 
-.menu .container-btn .btn:hover {
+.container-menu .container-btn .btn:hover {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(155, 99, 223, 0.902467)), to(#ff88de));
   background: linear-gradient(0deg, rgba(155, 99, 223, 0.902467), #ff88de);
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0rem 0.45rem 0.85rem;
           box-shadow: rgba(0, 0, 0, 0.25) 0rem 0.45rem 0.85rem;
 }
 
-.menu .container-btn .btn a {
+.container-menu .container-btn .btn a {
   margin-left: auto;
   margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
+  .header-cover img {
+    width: 100%;
+    height: 26rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menu .container-title {
+    width: 100%;
+  }
+  .menu .menu-div {
+    width: 100%;
+  }
+  .menu .entrées {
+    width: 48%;
+  }
+  .menu .plats {
+    width: 48%;
+  }
+  .menu .desserts {
+    width: 50%;
+  }
   .fonctionnement {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -549,6 +588,69 @@ h2 {
   .restaurants .restaurants-cards {
     width: 48%;
     position: relative;
+  }
+  .restaurants .restaurants-cards .notification-container {
+    position: absolute;
+    right: 3%;
+  }
+  .restaurants .restaurants-cards .notification-container .cards-notification {
+    margin-top: 0.625rem;
+    background-color: #99E2D0;
+    border-radius: 0.1875rem;
+    color: green;
+    font-size: 0.9375rem;
+    padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-cover img {
+    width: 100%;
+    height: 28rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menu .container-title {
+    width: 100%;
+  }
+  .menu .menu-div {
+    width: 100%;
+  }
+  .menu .entrées {
+    width: 31%;
+  }
+  .menu .plats {
+    width: 31%;
+  }
+  .menu .desserts {
+    width: 31%;
+  }
+  .fonctionnement .fonctionnement-btn .btn-text {
+    width: 33%;
+  }
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurants h2 {
+    width: 100%;
+  }
+  .restaurants .restaurants-cards {
+    width: 31.5%;
+    position: relative;
+    margin-left: 10px;
   }
   .restaurants .restaurants-cards .notification-container {
     position: absolute;

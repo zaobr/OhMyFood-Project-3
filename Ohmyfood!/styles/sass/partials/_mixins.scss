@@ -10,6 +10,7 @@
     border-radius: 1.25rem;
     width: 87%;
     padding: 1.5625rem 0 1.5625rem 0;
+    position: relative;
     &:hover{
         background-color: #a96af52a;
         i{
@@ -19,13 +20,13 @@
     .btn-text{
         font-weight: 500;
         width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
     }
     i{
+        position: absolute;
         float: left;
         z-index: 1;
-        left: 0;
+        left: 4%;
         font-size: 1.125rem;
         margin-left: 1.5625rem;
         color: rgb(112, 112, 112);
@@ -225,6 +226,40 @@
 
 @mixin tab {
     @media screen and (min-width: 768px) {
+        .header-cover{
+            img{
+                width: 100%;
+                height: 26rem;
+                object-fit: cover;
+            }
+        }
+
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .container-title{
+                width: 100%;
+            }
+
+            .menu-div{
+                width: 100%;
+            }
+
+            .entrées{
+                width: 48%;
+            }
+
+            .plats{
+                width: 48%;
+            }
+
+            .desserts{
+                width: 50%;
+            }
+        }
+
         .fonctionnement{
             display: flex;
             flex-wrap: wrap;
@@ -260,6 +295,7 @@
                 }
             }
         }
+
         .restaurants{
             display: flex;
             flex-wrap: wrap;
@@ -288,6 +324,70 @@
 
 @mixin desktop {
     @media screen and (min-width: 1024px) {
-        
+        .header-cover{
+            img{
+                width: 100%;
+                height: 28rem;
+                object-fit: cover;
+            }
+        }
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .container-title{
+                width: 100%;
+            }
+
+            .menu-div{
+                width: 100%;
+            }
+
+            .entrées{
+                width: 31%;
+            }
+
+            .plats{
+                width: 31%;
+            }
+
+            .desserts{
+                width: 31%;
+            }
+        }
+
+        .fonctionnement{
+            .fonctionnement-btn{
+                .btn-text{
+                    width: 33%;
+                }
+            }
+        }
+
+        .restaurants{
+            display: flex;
+            flex-wrap: wrap;
+            h2{
+                width: 100%;
+            }
+            .restaurants-cards{
+                width: 31.5%;
+                position: relative;
+                margin-left: 10px;
+                .notification-container{
+                    position: absolute;
+                    right: 3%;
+                    .cards-notification{
+                        margin-top: 0.625rem;
+                        background-color: $mint;
+                        border-radius: 0.1875rem;
+                        color: green;
+                        font-size: 0.9375rem;
+                        padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+                    }
+                }
+            }
+        }
     }
 }

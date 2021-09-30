@@ -63,49 +63,52 @@ h2{
     border: 1px solid $mint;
     width: 32px;
 }
-
-.menu{
+.container-menu {
     background-color: rgb(240, 240, 240);
-    border-radius: 30px 30px 0 0;
-    margin-top: -60px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-
-    .container-title{
+    .menu{
         background-color: rgb(240, 240, 240);
-        margin-top: 30px;
-        .menu-title{
-            width: 76%;
-            font-size: 25px;
-            margin-left: 25px;
-            font-family: 'Shrikhand';
-            margin-right: auto;
+        border-radius: 30px 30px 0 0;
+        margin-top: -60px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    
+        .container-title{
+            background-color: rgb(240, 240, 240);
+            margin-top: 30px;
+            .menu-title{
+                width: 76%;
+                font-size: 25px;
+                margin-left: 25px;
+                font-family: 'Shrikhand';
+                margin-right: auto;
+            }
+            @include animated-heart-menu();
         }
-        @include animated-heart-menu();
-    }
-
-    h3{
-        margin-top: 40px;
-        font-weight: 100;
-        font-size: 15px;
-        margin-left: 15px;
-        text-transform: uppercase;
-    }
-
-    .menu-div{
-        @include plats();
-        &:hover{
-            @include animation-checkbox();
+    
+        h3{
+            margin-top: 40px;
+            font-weight: 100;
+            font-size: 15px;
+            margin-left: 15px;
+            text-transform: uppercase;
+        }
+    
+        .menu-div{
+            @include plats();
+            &:hover{
+                @include animation-checkbox();
+            }
         }
     }
 
     .container-btn{
         text-align: center;
         margin-top: 40px;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
         .btn{
             width: 33%;
+            max-width: 150px;
             @include btn();
             a{
                 margin-left: auto;
@@ -114,6 +117,9 @@ h2{
         }
     }
 }
+
+
+
 
 @include tab();
 
