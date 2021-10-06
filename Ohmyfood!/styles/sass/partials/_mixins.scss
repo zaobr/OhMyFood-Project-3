@@ -4,13 +4,13 @@
 
 @mixin animation-loader {
   .index-loader{
-    height: 0px;
+    height: 0em;
     text-align: center;
     position: relative;
     animation: heightmaxtomin 3s linear;
     i{
         color: $purple;
-        font-size: 40px;
+        font-size: 2.5em;
         position: absolute;
         bottom: calc(50% - 20px);
         margin: auto;
@@ -33,7 +33,7 @@
     position: relative;
     align-items: center;
     display: flex;
-    max-width: 325px;
+    max-width: 20.3125em;
     &:hover{
         background-color: #a96af52a;
         i{
@@ -44,7 +44,7 @@
     .btn-text{
         font-weight: 500;
         width: 80%;
-        margin-left: 15px;
+        margin-left: 0.9375em;
     }
 
     i{
@@ -57,7 +57,7 @@
         position: absolute;
         color: white;
         font-size: 0.875rem;
-        left: -12px;
+        left: -0.75em;
         padding: 0.25rem 0.5rem 0.25rem 0.5rem;
         background-color: $purple;
         border-radius: 0.9375rem;
@@ -82,22 +82,22 @@
     .container-icon{
         width: 20%;
         .empty-icon{
-            font-size: 25px;
-            margin-top: 25px;
+            font-size: 1.5625em;
+            margin-top: 1.5625em;
             background: rgba(29, 29, 29, 0.623);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .full-icon{
-            font-size: 22px;
-            margin-top: 25px;
+            font-size: 1.375em;
+            margin-top: 1.5625em;
             background: $gradient;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            height: 0px;
+            height: 0em;
             transition: height 1s ease;
             &:hover{
-                height: 25px;
+                height: 1.5625em;
             }
         }
     }
@@ -107,24 +107,24 @@
     .container-icon{
         width: 24%;
         .empty-icon{
-            font-size: 23px;
-            margin-top: 4px;
+            font-size: 1.4375em;
+            margin-top: 0.25em;
             background: rgba(29, 29, 29, 0.493);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            height: 25px;
+            height: 1.5625em;
 
         }
         .full-icon{
-            font-size: 23px;
-            margin-top: 4px;
+            font-size: 1.4375em;
+            margin-top: 0.25em;
             background: $gradient;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            height: 0px;
+            height: 0em;
             transition: height 1s ease;
             &:hover{
-                height: 25px;
+                height: 1.5625em;
             }
         }
     }
@@ -180,28 +180,28 @@
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 12px;
-    margin-bottom: 10px;
+    margin-top: 0.75em;
+    margin-bottom: 0.625em;
     background: white;
-    border-radius: 15px;
+    border-radius: 0.9375em;
     box-shadow: $shadow;
     overflow: hidden;
     flex-wrap: nowrap;
     .plat-container{
-        margin: 10px 0 10px 10px;
+        margin: 0.625em 0 0.625em 0.625em;
         width: 87%;
         overflow: hidden;
         .menu-plat{
             font-weight: 500;
-            font-size: 15px;
+            font-size: 0.9375em;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
         .menu-description{
             font-weight: 100;
-            font-size: 13px;
-            margin-top: 5px;
+            font-size: 0.8125em;
+            margin-top: 0.3125em;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -210,9 +210,9 @@
     .price-container{
         width: 13%;
         .menu-price{
-            margin-top: 32px;
+            margin-top: 2em;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 0.875em;
             margin-left: auto;
             margin-right: auto;
         }
@@ -221,10 +221,10 @@
         position: relative;
         width: 0%;
         background-color: $mint;
-        font-size: 27px;
+        font-size: 1.6875em;
         color: white;
         overflow: hidden;
-        padding: 14px 0 14px 0;
+        padding: 0.875em 0 0.875em 0;
         transition: width 1s;
         i{
             transition: transform 1s;
@@ -247,7 +247,7 @@
 }
 
 @mixin tab {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48em) {
         .header-cover{
             img{
                 width: 100%;
@@ -291,17 +291,17 @@
             .fonctionnement-btn{
                 width: 29%;
                 .fa-mobile-alt{
-                    font-size: 20px;
+                    font-size: 1.25em;
                     margin-left: 1.2rem;
                 }
 
                 .fa-list-ul{
-                    font-size: 20px;
+                    font-size: 1.25em;
                     margin-left: 1.2rem;
                 }
 
                 .fa-store{
-                    font-size: 19px;
+                    font-size: 1.1875em;
                     margin-left: 1rem;
                 }
 
@@ -341,7 +341,7 @@
 }
 
 @mixin desktop {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 64em) {
         .header-cover{
             img{
                 width: 100%;
@@ -378,7 +378,7 @@
         .fonctionnement{
             .fonctionnement-btn{
                 .btn-text{
-                    max-width: 134px;
+                    max-width: 8.375em;
                 }
             }
         }
@@ -393,7 +393,7 @@
                 .restaurants-cards{
                     width: 31.5%;
                     position: relative;
-                    margin-left: 10px;
+                    margin-left: 0.625em;
                     .notification-container{
                         position: absolute;
                         right: 3%;
@@ -413,9 +413,9 @@
 }
 
 @mixin desktop-wide {
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 120em) {
         .fonctionnement, .restaurants-content, footer ul, footer .footer-logo{
-            max-width: 1920px;
+            max-width: 120em;
             margin-left: auto;
             margin-right: auto;
         }
