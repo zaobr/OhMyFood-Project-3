@@ -1,4 +1,4 @@
-@import "partials/_reset.scss", "partials/_variables.scss", "partials/_mixins.scss", "partials/_typo.scss", "partials/_header.scss", "partials/_localisation.scss", "partials/_footer.scss";
+@import "partials/_reset.scss", "partials/_variables.scss", "partials/_mixins.scss", "partials/animation.scss","partials/_typo.scss", "partials/_header.scss", "partials/_localisation.scss", "partials/_footer.scss";
 
 // Index
 .flex{
@@ -12,6 +12,7 @@ h2{
 
 .fonctionnement{
     margin-bottom: 4.375rem;
+    align-items: center;
     .fonctionnement-btn{
         @include fonctionnement-btn();
     }
@@ -43,12 +44,14 @@ h2{
 .restaurants{
     background-color: rgb(240, 240, 240);
     padding-bottom: 3.75rem;
-    .restaurants-cards{
-        @include restaurants-cards();
-        a{
-            text-decoration: none;
-            &:visited{
-                color: black;
+    .restaurants-content{
+        .restaurants-cards{
+            @include restaurants-cards();
+            a{
+                text-decoration: none;
+                &:visited{
+                    color: black;
+                }
             }
         }
     }
@@ -118,9 +121,36 @@ h2{
     }
 }
 
+.entrées{
+    animation: slideDown 1s;
+}
+
+.plats{
+    animation: slideDown 1.5s;
+}
+
+.desserts{
+    animation: slideDown 2s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 
 
 @include tab();
 
 @include desktop();
+
+@include desktop-wide();
+
+@include animation-loader;

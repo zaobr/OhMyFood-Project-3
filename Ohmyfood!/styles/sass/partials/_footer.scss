@@ -2,11 +2,13 @@ footer{
     background-color: rgb(54, 54, 54);
     color: white;
     padding-bottom: 1.875rem;
-    img{
-        margin: 1.5625rem 0 0.9375rem 1.25rem;
-        width: 25%;
-        max-width: 150px;
-        filter: invert(1);
+    .footer-logo{
+        img{
+            margin: 1.5625rem 0 0.9375rem 1.25rem;
+            width: 25%;
+            max-width: 150px;
+            filter: invert(1);
+        }
     }
     ul>li{
         list-style-type: none;

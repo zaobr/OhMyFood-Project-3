@@ -2,8 +2,28 @@
     margin: $margt auto $margb auto;
 }
 
-@mixin fonctionnement-btn {
+@mixin animation-loader {
+  .index-loader{
+    height: 0px;
     text-align: center;
+    position: relative;
+    animation: heightmaxtomin 3s linear;
+    i{
+        color: $purple;
+        font-size: 40px;
+        position: absolute;
+        bottom: calc(50% - 20px);
+        margin: auto;
+        animation: spin 1.2s linear 3.5;
+    }
+  }
+
+    .hide-loader{
+        animation: hideLoader 3s;
+    }
+}
+
+@mixin fonctionnement-btn {
     box-shadow: $shadow;
     background-color: rgba(240, 240, 240, 0.712);
     @include center-margin-tb(30px, 0px);
@@ -11,31 +31,33 @@
     width: 87%;
     padding: 1.5625rem 0 1.5625rem 0;
     position: relative;
+    align-items: center;
+    display: flex;
+    max-width: 325px;
     &:hover{
         background-color: #a96af52a;
         i{
             color: $purple;
         }
     }
+
     .btn-text{
         font-weight: 500;
-        width: 70%;
-        margin: auto;
+        width: 80%;
+        margin-left: 15px;
     }
+
     i{
-        position: absolute;
-        float: left;
-        z-index: 1;
-        left: 4%;
+        text-align: center;
+        width: 20%;
         font-size: 1.125rem;
-        margin-left: 1.5625rem;
         color: rgb(112, 112, 112);
     }
     .btn-number{
-        float: left;
+        position: absolute;
         color: white;
         font-size: 0.875rem;
-        margin-left: -0.625rem;
+        left: -12px;
         padding: 0.25rem 0.5rem 0.25rem 0.5rem;
         background-color: $purple;
         border-radius: 0.9375rem;
@@ -270,51 +292,47 @@
                 width: 29%;
                 .fa-mobile-alt{
                     font-size: 20px;
-                    margin-top: 0.6rem;
                     margin-left: 1.2rem;
                 }
 
                 .fa-list-ul{
                     font-size: 20px;
-                    margin-top: 0.6rem;
                     margin-left: 1.2rem;
                 }
 
                 .fa-store{
                     font-size: 19px;
-                    margin-top: 0.6rem;
                     margin-left: 1rem;
-                }
-
-                .btn-number{
-                    margin-top: 0.4rem;
                 }
 
                 .btn-text{
                     width: 45%;
+                    text-align: center;
                 }
             }
         }
 
         .restaurants{
-            display: flex;
-            flex-wrap: wrap;
-            h2{
-                width: 100%;
-            }
-            .restaurants-cards{
-                width: 48%;
-                position: relative;
-                .notification-container{
-                    position: absolute;
-                    right: 3%;
-                    .cards-notification{
-                        margin-top: 0.625rem;
-                        background-color: $mint;
-                        border-radius: 0.1875rem;
-                        color: green;
-                        font-size: 0.9375rem;
-                        padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+            .restaurants-content{
+                display: flex;
+                flex-wrap: wrap;
+                h2{
+                    width: 100%;
+                }
+                .restaurants-cards{
+                    width: 48%;
+                    position: relative;
+                    .notification-container{
+                        position: absolute;
+                        right: 3%;
+                        .cards-notification{
+                            margin-top: 0.625rem;
+                            background-color: $mint;
+                            border-radius: 0.1875rem;
+                            color: green;
+                            font-size: 0.9375rem;
+                            padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+                        }
                     }
                 }
             }
@@ -360,34 +378,46 @@
         .fonctionnement{
             .fonctionnement-btn{
                 .btn-text{
-                    width: 33%;
+                    max-width: 134px;
                 }
             }
         }
 
         .restaurants{
-            display: flex;
-            flex-wrap: wrap;
-            h2{
-                width: 100%;
-            }
-            .restaurants-cards{
-                width: 31.5%;
-                position: relative;
-                margin-left: 10px;
-                .notification-container{
-                    position: absolute;
-                    right: 3%;
-                    .cards-notification{
-                        margin-top: 0.625rem;
-                        background-color: $mint;
-                        border-radius: 0.1875rem;
-                        color: green;
-                        font-size: 0.9375rem;
-                        padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+            .restaurants-content{
+                display: flex;
+                flex-wrap: wrap;
+                h2{
+                    width: 100%;
+                }
+                .restaurants-cards{
+                    width: 31.5%;
+                    position: relative;
+                    margin-left: 10px;
+                    .notification-container{
+                        position: absolute;
+                        right: 3%;
+                        .cards-notification{
+                            margin-top: 0.625rem;
+                            background-color: $mint;
+                            border-radius: 0.1875rem;
+                            color: green;
+                            font-size: 0.9375rem;
+                            padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+                        }
                     }
                 }
             }
+        }
+    }
+}
+
+@mixin desktop-wide {
+    @media screen and (min-width: 1920px) {
+        .fonctionnement, .restaurants-content, footer ul, footer .footer-logo{
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
