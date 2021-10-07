@@ -349,29 +349,23 @@
                 object-fit: cover;
             }
         }
-        .menu{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-
-            .container-title{
-                width: 100%;
-            }
-
-            .menu-div{
-                width: 100%;
-            }
-
-            .entrees{
-                width: 31%;
-            }
-
-            .plats{
-                width: 31%;
-            }
-
-            .desserts{
-                width: 31%;
+        .container-menu{
+            .menu{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+    
+                .entrees{
+                    width: 31%;
+                }
+    
+                .plats{
+                    width: 31%;
+                }
+    
+                .desserts{
+                    width: 31%;
+                }
             }
         }
 
