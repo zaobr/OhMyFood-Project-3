@@ -224,7 +224,8 @@
         font-size: 1.6875em;
         color: white;
         overflow: hidden;
-        padding: 0.875em 0 0.875em 0;
+        display: flex;
+        align-items: center;
         transition: width 1s;
         i{
             transition: transform 1s;
