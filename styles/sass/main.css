@@ -363,12 +363,15 @@ h2 {
 
 .restaurants .restaurants-content .restaurants-cards .cards-text {
   height: 5rem;
-  background-color: white;
+  background-color: #ffffff;
   margin-top: -0.25rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: black;
 }
 
@@ -378,7 +381,7 @@ h2 {
 
 .restaurants .restaurants-content .restaurants-cards .cards-text .container-text h3 {
   font-size: 1.0625rem;
-  margin: 1.25rem 0rem 0.3125rem 0.625rem;
+  margin: 0 0rem 0.3125rem 0.625rem;
 }
 
 .restaurants .restaurants-content .restaurants-cards .cards-text .container-text p {
@@ -392,7 +395,6 @@ h2 {
 
 .restaurants .restaurants-content .restaurants-cards .cards-text .container-icon .empty-icon {
   font-size: 1.5625em;
-  margin-top: 1.5625em;
   background: rgba(29, 29, 29, 0.623);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -400,7 +402,6 @@ h2 {
 
 .restaurants .restaurants-content .restaurants-cards .cards-text .container-icon .full-icon {
   font-size: 1.375em;
-  margin-top: 1.5625em;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.902467)), to(#ff79da));
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.902467) 0%, #ff79da 100%);
   -webkit-background-clip: text;
@@ -462,7 +463,6 @@ h2 {
 
 .container-menu .menu .container-title .container-icon .empty-icon {
   font-size: 1.4375em;
-  margin-top: 0.25em;
   background: rgba(29, 29, 29, 0.493);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -471,7 +471,6 @@ h2 {
 
 .container-menu .menu .container-title .container-icon .full-icon {
   font-size: 1.4375em;
-  margin-top: 0.25em;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.902467)), to(#ff79da));
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.902467) 0%, #ff79da 100%);
   -webkit-background-clip: text;
