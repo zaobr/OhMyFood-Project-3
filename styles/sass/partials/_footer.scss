@@ -1,0 +1,30 @@
+footer{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding-bottom: 1.875rem;
+    .footer-logo{
+        img{
+            margin: 1.5625rem 0 0.9375rem 1.25rem;
+            width: 25%;
+            max-width: 9.375em;
+            filter: invert(1);
+        }
+    }
+    ul>li{
+        list-style-type: none;
+        font-size: 0.9375rem;
+        margin: 0 0 0.4375rem 1.25rem;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .fa-utensils{
+            font-size: 0.875rem;
+            margin-right: 0.6875rem;
+        }
+        .fa-hands-helping{
+            font-size: 0.875rem;
+            margin-right: 0.25rem;
+        }
+    }
+}

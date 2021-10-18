@@ -1,0 +1,415 @@
+@mixin center-margin-tb($margt, $margb) {
+    margin: $margt auto $margb auto;
+}
+
+@mixin animation-loader {
+  .index-loader{
+    height: 0em;
+    text-align: center;
+    position: relative;
+    animation: heightmaxtomin 3s linear;
+    i{
+        color: $purple;
+        font-size: 2.5em;
+        position: absolute;
+        bottom: calc(50% - 20px);
+        margin: auto;
+        animation: spin 1.2s linear 3.5;
+    }
+  }
+
+    .hide-loader{
+        animation: hideLoader 3s;
+    }
+}
+
+@mixin fonctionnement-btn {
+    box-shadow: $shadow;
+    background-color: rgba(240, 240, 240, 0.712);
+    @include center-margin-tb(30px, 0px);
+    border-radius: 1.25rem;
+    width: 87%;
+    padding: 1.5625rem 0 1.5625rem 0;
+    position: relative;
+    align-items: center;
+    display: flex;
+    max-width: 20.3125em;
+    &:hover{
+        background-color: #a96af52a;
+        i{
+            color: $purple;
+        }
+    }
+
+    .btn-text{
+        font-weight: 500;
+        width: 80%;
+        margin-left: 0.9375em;
+    }
+
+    i{
+        text-align: center;
+        width: 20%;
+        font-size: 1.125rem;
+        color: rgb(112, 112, 112);
+    }
+    .btn-number{
+        position: absolute;
+        color: white;
+        font-size: 0.875rem;
+        left: -0.75em;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        background-color: $purple;
+        border-radius: 0.9375rem;
+    }
+}
+
+@mixin btn {
+    @include center-margin-tb(0, 40px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.1875rem 0.5rem;  
+    background: $gradient;
+    color: white;
+    padding: 0.9375rem 1.25rem 0.9375rem 1.25rem;
+    border-radius: 1.5625rem;
+    display: inline-flex;
+    &:hover{
+        background: $darkgradient;
+        box-shadow: rgba(0, 0, 0.1, 0.25) 0rem 0.45rem 0.85rem; 
+    }
+}
+
+@mixin animated-heart-index {
+    .container-icon{
+        width: 20%;
+        .empty-icon{
+            font-size: 1.5625em;
+            background: rgba(29, 29, 29, 0.623);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .full-icon{
+            font-size: 1.375em;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 0em;
+            transition: height 1s ease;
+            &:hover{
+                height: 1.5625em;
+            }
+        }
+    }
+}
+
+@mixin animated-heart-menu {
+    .container-icon{
+        width: 24%;
+        .empty-icon{
+            font-size: 1.4375em;
+            background: rgba(29, 29, 29, 0.493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 1.5625em;
+
+        }
+        .full-icon{
+            font-size: 1.4375em;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 0em;
+            transition: height 1s ease;
+            &:hover{
+                height: 1.5625em;
+            }
+        }
+    }
+}
+
+
+@mixin restaurants-cards {
+    width: 90%;
+    overflow: hidden;
+    @include center-margin-tb(20px, 0px);
+    border-radius: 0.9375rem;
+    box-shadow: $shadow;
+    .notification-container{
+        position: absolute;
+        right: 7%;
+        .cards-notification{
+            margin-top: 0.625rem;
+            background-color: $mint;
+            border-radius: 0.1875rem;
+            color: green;
+            font-size: 0.9375rem;
+            padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+        }
+    }
+    img{
+        width: 100%;
+        height: 10.9375rem;
+        object-fit: cover;
+    }
+    .cards-text{
+        height: 5rem;
+        background-color: #ffffff;
+        margin-top: -0.25rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: black;
+        .container-text{
+            width: 80%;
+            h3{
+                font-size: 1.0625rem;
+                margin: 0 0rem 0.3125rem 0.625rem;
+            }
+            p{
+                margin-left: 0.625rem;
+                font-weight: 300;
+            }
+        }
+        @include animated-heart-index();
+    }
+}
+
+@mixin plats {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75em;
+    margin-bottom: 0.625em;
+    background: white;
+    border-radius: 0.9375em;
+    box-shadow: $shadow;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    .plat-container{
+        margin: 0.625em 0 0.625em 0.625em;
+        width: 87%;
+        overflow: hidden;
+        .menu-plat{
+            font-weight: 500;
+            font-size: 0.9375em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .menu-description{
+            font-weight: 100;
+            font-size: 0.8125em;
+            margin-top: 0.3125em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    .price-container{
+        width: 13%;
+        .menu-price{
+            margin-top: 2em;
+            font-weight: 500;
+            font-size: 0.875em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .plat-animation{
+        position: relative;
+        width: 0%;
+        background-color: $mint;
+        font-size: 1.6875em;
+        color: white;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        transition: width 1s;
+        i{
+            transition: transform 1s;
+            position: absolute;
+            left: calc(50% - 13.5px);
+            transform: rotate(90deg);
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+};
+
+@mixin animation-checkbox {
+    .plat-animation{
+        width: 35%;
+        i{
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@mixin tab {
+    @media screen and (min-width: 48em) {
+        .header-cover{
+            img{
+                width: 100%;
+                height: 26rem;
+                object-fit: cover;
+            }
+        }
+
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .container-title{
+                width: 100%;
+            }
+
+            .menu-div{
+                width: 100%;
+            }
+
+            .entrees{
+                width: 48%;
+            }
+
+            .plats{
+                width: 48%;
+            }
+
+            .desserts{
+                width: 50%;
+            }
+        }
+
+        .fonctionnement{
+            display: flex;
+            flex-wrap: wrap;
+            h2{
+                width: 100%;
+            }
+            .fonctionnement-btn{
+                width: 29%;
+                .fa-mobile-alt{
+                    font-size: 1.25em;
+                    margin-left: 1.2rem;
+                }
+
+                .fa-list-ul{
+                    font-size: 1.25em;
+                    margin-left: 1.2rem;
+                }
+
+                .fa-store{
+                    font-size: 1.1875em;
+                    margin-left: 1rem;
+                }
+
+                .btn-text{
+                    width: 45%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .restaurants{
+            .restaurants-content{
+                display: flex;
+                flex-wrap: wrap;
+                h2{
+                    width: 100%;
+                }
+                .restaurants-cards{
+                    width: 48%;
+                    position: relative;
+                    .notification-container{
+                        position: absolute;
+                        right: 3%;
+                        .cards-notification{
+                            margin-top: 0.625rem;
+                            background-color: $mint;
+                            border-radius: 0.1875rem;
+                            color: green;
+                            font-size: 0.9375rem;
+                            padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 64em) {
+        .header-cover{
+            img{
+                width: 100%;
+                height: 28rem;
+                object-fit: cover;
+            }
+        }
+        .container-menu{
+            .menu{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+    
+                .entrees{
+                    width: 31%;
+                }
+    
+                .plats{
+                    width: 31%;
+                }
+    
+                .desserts{
+                    width: 31%;
+                }
+            }
+        }
+
+        .fonctionnement{
+            .fonctionnement-btn{
+                .btn-text{
+                    max-width: 8.375em;
+                }
+            }
+        }
+
+        .restaurants{
+            .restaurants-content{
+                display: flex;
+                flex-wrap: wrap;
+                h2{
+                    width: 100%;
+                }
+                .restaurants-cards{
+                    width: 31.5%;
+                    position: relative;
+                    margin-left: 0.625em;
+                    .notification-container{
+                        position: absolute;
+                        right: 3%;
+                        .cards-notification{
+                            margin-top: 0.625rem;
+                            background-color: $mint;
+                            border-radius: 0.1875rem;
+                            color: green;
+                            font-size: 0.9375rem;
+                            padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin desktop-wide {
+    @media screen and (min-width: 120em) {
+        .fonctionnement, .restaurants-content, footer ul, footer .footer-logo{
+            max-width: 120em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
